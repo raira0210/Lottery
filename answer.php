@@ -1,7 +1,7 @@
 <?php
 
 if(empty($_GET["file"]) || empty($_GET["ans"])){
-	header("Location:http://www.testhp.shop/");<！--左のパスの置き換えをお願いします。-->
+	header("Location:http://www.testhp.shop/");//左のパスの置き換えをお願いします
 	exit;
 }else{}
 ?>
@@ -14,7 +14,7 @@ if(empty($_GET["file"]) || empty($_GET["ans"])){
 <title>簡易スピードくじ(仮作成)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex" />
-<link rel="stylesheet" href="http://www.testhp.shop/css/style.css"><！--左のパスでCSSを指定してください、相対パスではなく絶対パスでお願いします。-->
+<link rel="stylesheet" href="http://www.testhp.shop/css/style.css"><!--左のパスでCSSを指定してください、相対パスではなく絶対パスでお願いします。-->
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -23,7 +23,7 @@ if(empty($_GET["file"]) || empty($_GET["ans"])){
 <?php 
 
 $fileo = $_GET["fileo"];
-echo "<body onLoad=setTimeout(\"location.href=\'http://www.testhp.shop/kuji/".$fileo."\'\",5000)>";<！--左のパスの置き換えをお願いします。-->
+echo "<body onLoad=setTimeout(\"location.href=\'http://www.testhp.shop/?txt=".$fileo."\'\",5000)>";//左のパスの置き換えをお願いします。
 
 ?>
 
@@ -68,7 +68,7 @@ $str_grep = preg_replace('/('.$keihin[0].')(.*),[0-9]*/', '$1$2,'.$nokori2, $str
 file_put_contents($rdfile, $str_grep);
 
 echo "<CENTER><p style=\"font-size:600%\"><font color=\"#ff0000\">".$rank[0]."</font></p>";
-echo "<p><img src=\"http://www.testhp.shop/".$image[0]."\" width=\"70%\" height=\"50%\"></p>";<！--左のパスの置き換えをお願いします。-->
+echo "<p><img src=\"http://www.testhp.shop/".$image[0]."\" width=\"70%\" height=\"50%\"></p>";//左のパスの置き換えをお願いします。
 echo "<p style=\"font-size:400%\"><font color=\"#00ff00\">".$keihin[0]."</font></p>";
 
 /*
@@ -95,6 +95,10 @@ if (unlink('txt/'.$file_enc)){
 
 </div>
 <!--/container-->
+
+<footer>
+<small>Copyright&copy; watanabe.</small>
+</footer>
 
 <script type="text/javascript">
 if (OCwindowWidth() <= 900) {

@@ -6,7 +6,7 @@
 <title>簡易スピードくじ(仮作成)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex" />
-<link rel="stylesheet" href="http://www.testhp.shop/css/style.css"><！--左のパスでCSSを指定してください、相対パスではなく絶対パスでお願いします。-->
+<link rel="stylesheet" href="http://www.testhp.shop/css/style.css"><!--左のパスでCSSを指定してください、相対パスではなく絶対パスでお願いします。-->
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -31,7 +31,7 @@ function checkSimilar(array $list):string
 
 if(empty($_GET["txt"])){
 
-	$html = "<CENTER>URLの末尾に  kuji/該当txtのファイル名(拡張子除く)を  入力してください。<br>例:http://www.testhp.shop/kuji/abcde(ファイル名)</CENTER>";<！--左のパスをお使いになるドメインに置き換えてください。なお、/kujiから後ろは固定となりますので、その前まで置き換えをお願いします。-->
+	$html = "<CENTER>URLの末尾に  ?txt=該当txtのファイル名(拡張子除く)を  入力してください。<br>例:http://www.testhp.shop/?txt=abcde(ファイル名)</CENTER>";//左のパスをお使いになるドメインに置き換えてください。なお、/kujiから後ろは固定となりますので、その前まで置き換えをお願いします。
 }else{
 
 	$file = $_GET["txt"].".txt";
@@ -96,7 +96,7 @@ if(empty($_GET["txt"])){
 
 			}else{
 
-				$html = "<CENTER>下の赤い箱をタップして、くじを引いてね！！<br><br><a href=\"http://www.testhp.shop/main.php?file=".$_GET["txt"]."\"><img src=\"http://www.testhp.shop/images/kujiwohiku.png\" width=\"40%\" height=\"40%\"></a><br><br>くじは残り".$num."枚です。</CENTER>";<！--左のmain.phpとkujiwohiku.pngのパスも置き換えをお願いします。-->
+				$html = "<CENTER>下の赤い箱をタップして、くじを引いてね！！<br><br><a href=\"http://www.testhp.shop/main.php?file=".$_GET["txt"]."\"><img src=\"http://www.testhp.shop/images/kujiwohiku.png\" width=\"40%\" height=\"40%\"></a><br><br>くじは残り".$num."枚です。</CENTER>";//左のmain.phpとkujiwohiku.pngのパスも置き換えをお願いします。
 
 			}
 
@@ -119,6 +119,10 @@ echo $html;
 
 </div>
 <!--/container-->
+
+<footer>
+<small>Copyright&copy; watanabe.</small>
+</footer>
 
 <script type="text/javascript">
 if (OCwindowWidth() <= 900) {
