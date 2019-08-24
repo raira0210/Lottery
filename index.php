@@ -59,7 +59,9 @@ if(empty($_GET["txt"])){
 			exec('cat txt/'.$file_enc.' | awk -F \',\' \'{print $1}\'',$tyou);
 
 			if(checkSimilar($tyou) != 1){
-
+				
+				var_dump(checkSimilar($tyou));
+				var_dump($tyou);
 				$html = "<CENTER>txtファイル内のNoが重複しています。確認してください。</CENTER>";
 
 			}else{
