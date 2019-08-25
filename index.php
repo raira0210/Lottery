@@ -37,7 +37,7 @@ if(empty($_GET["txt"])){
 	$file = $_GET["txt"].".txt";
 	$file_enc = $_GET["txt"]."_back.txt";
 	$check = exec('ls -l txt/'.$file);
-	var_dump($check);
+	
 	if(empty($check)){
 
 		$html = "<CENTER>指定されたtxtファイルは存在しません</CENTER>";
@@ -48,7 +48,7 @@ if(empty($_GET["txt"])){
 			exec('nkf -w txt/'.$file.' > txt/'.$file_enc);
 
 			exec('cat txt/'.$file.' | awk -F \',\' \'{print $6}\'',$output);
-			var_dump($output);		
+				
 			$num = 0;
 
 			for ($i = 1 ; $i < count($output); $i++) {
@@ -60,8 +60,7 @@ if(empty($_GET["txt"])){
 			exec('cat txt/'.$file.' | awk -F \',\' \'{print $1}\'',$tyou);
 
 			if(checkSimilar($tyou) != 1){
-				var_dump($tyou);
-				var_dump(checkSimilar($tyou));
+				
 				$html = "<CENTER>txtファイル内のNoが重複しています。確認してください。</CENTER>";
 
 			}else{
