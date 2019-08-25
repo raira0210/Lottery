@@ -7,9 +7,7 @@ if(empty($_GET["file"])){
 }else{
 
 	$file_enc = $_GET["file"].".txt";
-	echo $_GET["file"];
-	echo "<br>";
-	echo "<br>";
+	
 
 	exec('cat txt/'.$file_enc.' | awk -F \',\' \'{print $6}\'',$number);
 	exec('cat txt/'.$file_enc.' | awk -F \',\' \'{print $3}\'',$keihin);
