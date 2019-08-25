@@ -46,7 +46,7 @@ if(empty($_GET["txt"])){
 			echo "<br>";
 			exec('nkf -w txt/'.$file.' > txt/'.$file_enc);
 
-			exec('cat txt/'.$file_enc.' | awk -F \',\' \'{print $6}\'',$output);
+			exec('cat txt/'.$file.' | awk -F \',\' \'{print $6}\'',$output);
 		
 			$num = 0;
 
@@ -65,7 +65,7 @@ if(empty($_GET["txt"])){
 
 			}else{
 
-				exec('cat txt/'.$file_enc.' | awk -F \',\' \'{print $4}\'',$im);
+				exec('cat txt/'.$file.' | awk -F \',\' \'{print $4}\'',$im);
 
 				$num5 = 0;
 				$num4 = 0;
