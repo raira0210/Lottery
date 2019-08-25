@@ -56,7 +56,7 @@ if(empty($_GET["txt"])){
 
 			}
 
-			exec('cat txt/'.$file_enc.' | awk -F \',\' \'{print $1}\'',$tyou);
+			exec('cat txt/'.$file.' | awk -F \',\' \'{print $1}\'',$tyou);
 
 			if(checkSimilar($tyou) != 1){
 				var_dump($tyou);
