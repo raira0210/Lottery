@@ -2,11 +2,11 @@
 
 
 if(empty($_GET["file"])){
-	header("Location:https://nxlottery.azurewebsites.net/");//左のパスの置き換えをお願いします。
+	header("Location:https://nxlottery.azurewebsites.net/");//蟾ｦ縺ｮ繝代せ縺ｮ鄂ｮ縺肴鋤縺医ｒ縺企｡倥＞縺励∪縺吶�
 	exit;
 }else{
 
-	$file_enc = $_GET["file"]."_back.txt";
+	$file_enc = $_GET["file"].".txt";
 	echo $_GET["file"];
 	echo "<br>";
 	echo "<br>";
@@ -32,7 +32,7 @@ if(empty($_GET["file"])){
 	$tw = count($array) -1;
 
 	$random = mt_rand(0, $tw);
-	header( "Location: https://nxlottery.azurewebsites.net/answer.php?ans=".$array[$random]."&file=".$file_enc."&fileo=".$_GET["file"]);//左のパスの置き換えをお願いします。
+	header( "Location: https://nxlottery.azurewebsites.net/answer.php?ans=".$array[$random]."&file=".$file_enc."&fileo=".$_GET["file"]);//蟾ｦ縺ｮ繝代せ縺ｮ鄂ｮ縺肴鋤縺医ｒ縺企｡倥＞縺励∪縺吶�
 
 	//echo $random;
 	//var_dump($array);
