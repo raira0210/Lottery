@@ -86,9 +86,9 @@ $str_grep = preg_replace('/('.$keihin[0].')(.*),[0-9]*/', '$1$2,'.$nokori2, $str
 //文字列をファイルに書き込む
 file_put_contents($rdfile, $str_grep);
 
-echo "<CENTER><p style=\"font-size:400%\"><font color=\"#ff0000\">".$rank[0]."</font></p>";
+echo "<CENTER><p style=\"font-size:300%\"><font color=\"#ff0000\">".$rank[0]."</font></p>";
 echo "<p><img src=\"".$image[0]."\" height=\"50vh\"></p>";
-echo "<p style=\"font-size:100%\"><font color=\"#00ff00\">".$keihin[0]."</font></p><CENTER>";
+echo "<p style=\"font-size:300%\">".$keihin[0]."</font></p><CENTER>";
 
 /*
 if (unlink('txt/'.$file_enc)){
