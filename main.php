@@ -2,7 +2,7 @@
 
 
 if(empty($_GET["file"])){
-	header("Location:https://nxlottery.azurewebsites.net/");//左のパスの置き換えをお願いします。
+	header("Location: /");
 	exit;
 }else{
 
@@ -30,7 +30,7 @@ if(empty($_GET["file"])){
 	$tw = count($array) -1;
 
 	$random = mt_rand(0, $tw);
-	header( "Location: https://nxlottery.azurewebsites.net/answer.php?ans=".$array[$random]."&file=".$file_enc."&fileo=".$_GET["file"]);//左のパスの置き換えをお願いします。
+	header( "Location: /answer.php?ans=".$array[$random]."&file=".$file_enc."&fileo=".$_GET["file"]);//左のパスの置き換えをお願いします。
 
 	//echo $random;
 	//var_dump($array);
