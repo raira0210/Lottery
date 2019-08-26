@@ -58,7 +58,7 @@ $ans = $_GET["ans"];
 $file_enc = $_GET["file"];
 
 if ($zaiko == 0){
-  echo "<p style=\"font-size:300%\">在庫が0です！"</font></p><CENTER>";
+  echo "<p style=\"font-size:300%\">在庫が0です！</font></p><CENTER>";
 }else{
   
 
