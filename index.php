@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>簡易スピードくじ(仮作成)</title>
+<title>スピードくじアプリ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex" />
 <link rel="stylesheet" href="https://nxlottery.azurewebsites.net/css/style.css"><!--左のパスでCSSを指定してください、相対パスではなく絶対パスでお願いします。-->
