@@ -14,9 +14,11 @@ if(empty($_GET["file"])){
 	exec('cat txt/'.$file_enc.' | awk -F \',\' \'{print $1}\'',$ban);
 
 	$array = array();
+	$num =0;
 
 	for ($i = 1 ; $i < count($number); $i++) {
-	
+		
+		$num = $num + $number[$i];	
 		for ($b = 0 ; $b < $number[$i]; $b++){
 		
 			$array[] = $ban[$i];
@@ -30,9 +32,7 @@ if(empty($_GET["file"])){
 	$tw = count($array) -1;
 
 	$random = mt_rand(0, $tw);
-	header( "Location: /answer.php?ans=".$array[$random]."&file=".$file_enc."&fileo=".$_GET["file"]);//左のパスの置き換えをお願いします。
+	header( "Location: /answer.php?ans=".$array[$random]."&file=".$file_enc."&fileo=".$_GET["file"]."&zaiko=".$num);//左のパスの置き換えをお願いします。
 
-	//echo $random;
-	//var_dump($array);
 
 ?>
