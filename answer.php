@@ -20,12 +20,31 @@ if(empty($_GET["file"]) || empty($_GET["ans"])){
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
+<body>
 <?php 
 
 $fileo = $_GET["fileo"];
-echo "<body onLoad=setTimeout(\"location.href=\'https://nxlottery.azurewebsites.net/?txt=".$fileo."\'\",5000)>";//左のパスの置き換えをお願いします。
+echo "<body onLoad=setTimeout(\"location.href=\'/?txt=".$fileo."\'\",7000)>";
 
 ?>
+	
+<script>
+$(document).ready(function () {
+
+  hsize = $(window).height();
+
+  $("section").css("height", hsize + "px");
+
+});
+
+$(window).resize(function () {
+
+  hsize = $(window).height();
+
+  $("section").css("height", hsize + "px");
+
+});
+</script>
 
 
 <div id="container">
@@ -67,9 +86,9 @@ $str_grep = preg_replace('/('.$keihin[0].')(.*),[0-9]*/', '$1$2,'.$nokori2, $str
 //文字列をファイルに書き込む
 file_put_contents($rdfile, $str_grep);
 
-echo "<CENTER><p style=\"font-size:600%\"><font color=\"#ff0000\">".$rank[0]."</font></p>";
-echo "<p><img src=\"https://nxlottery.azurewebsites.net/".$image[0]."\" width=\"70%\" height=\"50%\"></p>";//左のパスの置き換えをお願いします。
-echo "<p style=\"font-size:400%\"><font color=\"#00ff00\">".$keihin[0]."</font></p>";
+echo "<CENTER><p style=\"font-size:400%\"><font color=\"#ff0000\">".$rank[0]."</font></p>";
+echo "<p><img src=\"".$image[0]."\" height=\"50vh\"></p>";
+echo "<p style=\"font-size:100%\"><font color=\"#00ff00\">".$keihin[0]."</font></p><CENTER>";
 
 /*
 if (unlink('txt/'.$file_enc)){
@@ -88,7 +107,7 @@ if (unlink('txt/'.$file_enc)){
 </div>
 <!--/main-->
 <CENTER>
-<p>5秒後にくじ引き画面に戻ります。</p>
+<p>7秒後にくじ引き画面に戻ります。</p>
 </CENTER>
 </div>
 <!--/contents-->
