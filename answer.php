@@ -1,11 +1,3 @@
-<?php
-
-if(empty($_GET["file"]) || empty($_GET["ans"])){
-	header("Location:https://nxlottery.azurewebsites.net/");//左のパスの置き換えをお願いします
-	exit;
-}else{}
-?>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -60,8 +52,16 @@ $(window).resize(function () {
 <section>
 <?php
 
+
+$zaiko = $_GET["zaiko"];
 $ans = $_GET["ans"];
 $file_enc = $_GET["file"];
+
+if ($zaiko == 0){
+  echo "<p style=\"font-size:300%\">在庫が0です！"</font></p><CENTER>";
+}else{
+  
+
 
 
 exec('cat txt/'.$file_enc.' | egrep \'^'.$ans.'\' | awk -F \',\' \'{print $1}\'',$namunamu);
@@ -97,7 +97,7 @@ if (unlink('txt/'.$file_enc)){
   echo $file_enc.'の削除に失敗しました。';
 }*/
 
-
+}
 ?>
 
 
