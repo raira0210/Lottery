@@ -20,7 +20,7 @@
 <div class="main">
 <section id="new">
 <section>
-<img src="title.png">
+<CENTER><img src="images/title.png"></CENTER>
 <?php
 
 function checkSimilar(array $list):string
