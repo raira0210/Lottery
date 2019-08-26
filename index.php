@@ -1,3 +1,10 @@
+<?php
+if (empty($_SERVER['HTTPS'])) {
+    header("Location: https://nxlottery.azurewebsites.net/".$_GET["txt"]);
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
