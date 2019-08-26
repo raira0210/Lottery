@@ -20,6 +20,7 @@
 <div class="main">
 <section id="new">
 <section>
+<img src="title.png">
 <?php
 
 function checkSimilar(array $list):string
@@ -110,7 +111,7 @@ echo $html;
 
 ?>
 
-</section>
+</img>
 
 </div>
 <!--/main-->
